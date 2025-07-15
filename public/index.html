@@ -15,7 +15,7 @@
 
     <main>
 		<section id="producers">
-			<h2>Fool's Gold Leaderboard</h2>
+			<h2>Fool's Gold Absolute Leaderboard</h2>
 			<table>
 				<thead>
 					<tr>
@@ -36,9 +36,16 @@
 					<td id="jordan-overall"></td>
 				</tr>
 			</table>
-			<h3>Last Updated - 11:09am CST 7/15/2025</h3>
+			<h3>Last Updated - 4:00pm CST 7/15/2025</h3>
+			
+			
 		</section>
-
+		<section id="charts">
+			<div id="portfolios">
+			<!--<div id="videoTimeline">
+			<!--<div id="producerTimeline">
+			<!--<div id="videoScatter">-->
+		</section>
 		<section id="gallery">
             <div class="grid-container">
 					<a href="https://www.youtube.com/shorts/oO4kgmYivoQ"><img class="cropped-image-brennan" src="thumbnails.png" alt="Why Brennan is Leaving Dropout"></a>
@@ -51,7 +58,7 @@
 					<a href="https://www.youtube.com/shorts/gMpx4A2lRTE"><img class="cropped-image-paul" src="thumbnails.png" alt="Paul Covers His Entire Body in Glue"></a>
 					<a href="https://www.youtube.com/shorts/HD5pyGbO_Is"><img class="cropped-image-sephie" src="thumbnails.png" alt="Vote For Your Favorite Sexy Dropout Carwash"></a>
 					<a href="https://www.youtube.com/shorts/5feqZBLXrMg"><img class="cropped-image-katie" src="thumbnails.png" alt="Dimension 20: On a Bus"></a>
-					<a href="https://www.youtube.com/shorts/UjHk90dxX20"><img class="cropped-image-debbie" src="thumbnails.png" alt="Anna Makes Strangers King for a Day"></a>
+					<a href="https://www.youtube.com/shorts/UjHk90dxX20"><img class="cropped-image-anna" src="thumbnails.png" alt="Anna Makes Strangers King for a Day"></a>
             </div>
         </section>	
 
@@ -62,118 +69,142 @@
                     <tr>
                         <th>Video</th>
 						<th>Producer</th>
+						<th>Funding</th>
 						<th>YouTube Views</th>
 						<th>Instagram Likes</th>
 						<th>TikTok Views</th>
                         <th>Grand Total</th>
+						<th>ROI (views per dollar)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr id="tr-brennan">
-						<td>"Why Brennan is Leaving Dropout"</td>
+						<td id="brennan-description">"Why Brennan is Leaving Dropout"</td>
 						<td id="brennan-producer">Mike Trapp, Rekha Shanker & Jordan Myrick</td>
+						<td id="brennan-funding">$20,000</td>
                         <td id="brennan-youtube"></td>
                         <td id="brennan-instagram"></td>
 						<td id="brennan-tiktok"></td>
 						<td class="mike rekha jordan" id="brennan-total"></td>
+						<td id="brennan-roi"></td>
                     </tr>
 
 					<tr id="tr-izzy">
-						<td>"Izzy Spends $3000 on Animated Buttholes"</td>
+						<td id="izzy-description">"Izzy Spends $3000 on Animated Buttholes"</td>
 						<td id="izzy-producer">Mike Trapp & Rekha Shanker</td>
+						<td id="izzy-funding">$4,000</td>
                         <td id="izzy-youtube"></td>
                         <td id="izzy-instagram"></td>
 						<td id="izzy-tiktok"></td>
 						<td class="mike rekha" id="izzy-total"></td>
+						<td id="izzy-roi"></td>
                     </tr>
 					
 					<tr id="tr-erika">
-						<td>"Erika Roasts Sam with a Haircut"</td>
+						<td id="erika-description">"Erika Roasts Sam with a Haircut"</td>
 						<td id="erika-producer">Jordan Myrick</td>
+						<td id="erika-funding">$506</td>
                         <td id="erika-youtube"></td>
                         <td id="erika-instagram"></td>
 						<td id="erika-tiktok"></td>
 						<td class="jordan" id="erika-total"></td>
+						<td id="erika-roi"></td>
                     </tr>
 					
 					<tr id="tr-jordan">
-						<td>"Jordan Takes the Breast Milk Taste Test Challenge"</td>
+						<td id="jordan-description">"Jordan Takes the Breast Milk Taste Test Challenge"</td>
 						<td id="jordan-producer">Jordan Myrick</td>
+						<td id="jordan-funding">$6,144</td>
                         <td id="jordan-youtube"></td>
                         <td id="jordan-instagram"></td>
 						<td id="jordan-tiktok"></td>
 						<td class="jordan" id="jordan-total"></td>
+						<td id="jordan-roi"></td>
                     </tr>
 					
 					<tr id="tr-johnny">
-						<td>"Presenting: The Human Puppy Bowl"</td>
+						<td id="johnny-description">"Presenting: The Human Puppy Bowl"</td>
 						<td id="johnny-producer">Mike Trapp & Jordan Myrick</td>
+						<td id="johnny-funding">$5,000</td>
                         <td id="johnny-youtube"></td>
                         <td id="johnny-instagram"></td>
 						<td id="johnny-tiktok"></td>
 						<td class="mike jordan" id="johnny-total"></td>
+						<td id="johnny-roi"></td>
                     </tr>
 					
 					<tr id="tr-grant">
-						<td>"Can Grant Get Over 40 Cracks At the Chiropractor"</td>
+						<td id="grant-description">"Can Grant Get Over 40 Cracks At the Chiropractor?"</td>
 						<td id="grant-producer">Mike Trapp</td>
+						<td id="grant-funding">$1,201</td>
                         <td id="grant-youtube"></td>
                         <td id="grant-instagram"></td>
 						<td id="grant-tiktok"></td>
 						<td class="mike" id="grant-total"></td>
+						<td id="grant-roi"></td>
                     </tr>
 					
 					<tr id="tr-paul">
-						<td>"Paul Covers His Entire Body in Glue"</td>
+						<td id="paul-description">"Paul Covers His Entire Body in Glue"</td>
 						<td id="paul-producer">Mike Trapp</td>
+						<td id="paul-funding">$550</td>
                         <td id="paul-youtube"></td>
                         <td id="paul-instagram"></td>
 						<td id="paul-tiktok"></td>
 						<td class="mike" id="paul-total"></td>
+						<td id="paul-roi"></td>
                     </tr>
 					
 					<tr id="tr-sephie">
-						<td>"Vote For Your Favorite Sexy Dropout Carwash"</td>
+						<td id="sephie-description">"Vote For Your Favorite Sexy Dropout Carwash"</td>
 						<td id="sephie-producer">Rekha Shanker & Jordan Myrick</td>
+						<td id="sephie-funding">$3,700</td>
                         <td id="sephie-youtube"></td>
                         <td id="sephie-instagram"></td>
 						<td id="sephie-tiktok"></td>
 						<td class="rekha jordan" id="sephie-total"></td>
+						<td id="sephie-roi"></td>
                     </tr>
 					
 					<tr id="tr-katie">
-						<td>"Dimension 20: On a Bus"</td>
+						<td id="katie-description">"Dimension 20: On a Bus"</td>
 						<td id="katie-producer">Rekha Shanker</td>
+						<td id="katie-funding">$3,500</td>
                         <td id="katie-youtube"></td>
                         <td id="katie-instagram"></td>
 						<td id="katie-tiktok"></td>
 						<td class="rekha" id="katie-total"></td>
+						<td id="katie-roi"></td>
                     </tr>
 					
-					<tr id="tr-debbie">
-						<td>"Anna Makes Strangers King for a Day"</td>
-						<td id="debbie-producer">Jordan Myrick</td>
-                        <td id="debbie-youtube"></td>
-                        <td id="debbie-instagram"></td>
-						<td id="debbie-tiktok"></td>
-						<td class="jordan" id="debbie-total"></td>
+					<tr id="tr-anna">
+						<td id="anna-description">"Anna Makes Strangers King for a Day"</td>
+						<td id="anna-producer">Jordan Myrick</td>
+						<td id="anna-funding">$1,500</td>
+                        <td id="anna-youtube"></td>
+                        <td id="anna-instagram"></td>
+						<td id="anna-tiktok"></td>
+						<td class="jordan" id="anna-total"></td>
+						<td id="anna-roi"></td>
                     </tr>
                 </tbody>
             </table>
         </section>
-		
-			
     </main>
 	
 	<h3>F.A.Q. - Frequently Asked Questions</h3>
 	<ol>
+		<li>Why?
+			<ul><li>Truthfully, I thought that Dropout would release their own real-time dashboard to kind of go along with the episode. When they didn't, and I saw the work being done by <a href="https://www.reddit.com/user/WeiShiLirinArelius">WeiShiLirinArelius</a>, I decided to make my own.</ul>
 		<li>How did you collect the video statistics?
 			<ul><li>Tediously.</ul>
 		<li>But actually?
-			<ul><li>YouTube and Tiktok scores are taken directly from views. As of 7/15 (day 2), Instagram is taken from Likes as a proxy for views because I don't have an Instagram account to analyze deeper. I'll have a better, automated process by tomorrow.</ul>
+			<ul><li>YouTube and Tiktok scores are taken directly from views. As of 7/15 (day 2), Instagram is taken from Likes as a proxy for views because the raw data can't be analyzed deeper. Need to find a better, automated process quickly.</ul>
 		<li>Can you add "X"?
-			<ul><li>I am already tinkering on the following ideas: ROI calculator for each video based on initial funding, a graphic or icon to indicate each producer's "portfolio", chart visualization of scores over time, and finally links to each video source (i.e. not just YouTube, and ideally a way to verify scores). 
+			<ul><li>I am already tinkering on the following ideas: a graphic or icon to indicate each producer's "portfolio", chart visualization of scores over time, and finally links to each video source (i.e. not just YouTube, and ideally a way to verify scores).</ul>
 	</ol>
 </body>
+<script src="scores.csv"></script>
 <script src="script.js"></script>
+<script src="viz.js"></script>
 </html>

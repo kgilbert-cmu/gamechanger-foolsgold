@@ -12,7 +12,7 @@ header {
 }
 
 header h1 {
-	color: #FFFF00;
+    color: #FFFF00;
 }
 
 /* Gallery Container */
@@ -34,117 +34,120 @@ header h1 {
 
 /* Picture Tiles */
 .grid-container .cropped-image-brennan {
-	  width: 1252px;
-	  height: 818px;
-	  overflow: hidden;
-	  clip-path: inset(0.11% 80.91% 57% 0.24% round 20%);
-	  object-fit: cover;
-	  margin-left: 0%
+	width: 1252px;
+	height: 818px;
+	overflow: hidden;
+	clip-path: inset(0.11% 80.91% 57% 0.24% round 20%);
+	object-fit: cover;
+	margin-left: 0%
 }
 
 .grid-container .cropped-image-izzy {
-	  width: 1252px;
-	  height: 818px;
-	  overflow: hidden;
-	  clip-path: inset(0.11% 60.73% 57% 20.44% round 20%);
-	  object-fit: cover;
-	  margin-left: -100%;
+	width: 1252px;
+	height: 818px;
+	overflow: hidden;
+	clip-path: inset(0.11% 60.73% 57% 20.44% round 20%);
+	object-fit: cover;
+	margin-left: -100%;
 }
 
 .grid-container .cropped-image-erika {
-	  width: 1252px;
-	  height: 818px;
-	  overflow: hidden;
-	  clip-path: inset(0.11% 40.57% 57% 40.6% round 20%);
-	  object-fit: cover;
-	  margin-left: -200%;
+	width: 1252px;
+	height: 818px;
+	overflow: hidden;
+	clip-path: inset(0.11% 40.57% 57% 40.6% round 20%);
+	object-fit: cover;
+	margin-left: -200%;
 }
 
 .grid-container .cropped-image-jordan {
-	  width: 1252px;
-	  height: 818px;
-	  overflow: hidden;
-	  clip-path: inset(0.11% 19.98% 57% 60.72% round 20%);
-	  object-fit: cover;
-	  margin-left: -300%; 
+	width: 1252px;
+	height: 818px;
+	overflow: hidden;
+	clip-path: inset(0.11% 19.98% 57% 60.72% round 20%);
+	object-fit: cover;
+	margin-left: -300%; 
 }
 
 .grid-container .cropped-image-johnny {
-	  width: 1252px;
-	  height: 818px;
-	  overflow: hidden;
-	  clip-path: inset(0.11% 0.46% 57% 81.15% round 20%);
-	  object-fit: cover; 
-	  margin-left: -400%;
+	width: 1252px;
+	height: 818px;
+	overflow: hidden;
+	clip-path: inset(0.11% 0.46% 57% 81.15% round 20%);
+	object-fit: cover; 
+	margin-left: -400%;
 }
 
 /* row 2 */
 .grid-container .cropped-image-grant {
-	  width: 1252px;
-	  height: 818px;
-	  overflow: hidden;
-	  clip-path: inset(56.35% 80.91% 0.52% 0.24% round 20%);
-	  object-fit: cover;
-	  margin-left: 0%;
-	  margin-top: -175%;
+	width: 1252px;
+	height: 818px;
+	overflow: hidden;
+	clip-path: inset(56.35% 80.91% 0.52% 0.24% round 20%);
+	object-fit: cover;
+	margin-left: 0%;
+	margin-top: -175%;
 }
 
 .grid-container .cropped-image-paul {
-	  width: 1252px;
-	  height: 818px;
-	  overflow: hidden;
-	  clip-path: inset(56.35% 60.73% 0.52% 20.44% round 20%);
-	  object-fit: cover;
-	  margin-left: -100%;
-	  margin-top: -175%;
+	width: 1252px;
+	height: 818px;
+	overflow: hidden;
+	clip-path: inset(56.35% 60.73% 0.52% 20.44% round 20%);
+	object-fit: cover;
+	margin-left: -100%;
+	margin-top: -175%;
 }
 
 .grid-container .cropped-image-sephie {
-	  width: 1252px;
-	  height: 818px;
-	  overflow: hidden;
-	  clip-path: inset(56.35% 40.57% 0.52% 40.6% round 20%);
-	  object-fit: cover;
-	  margin-left: -200%;
-	  margin-top: -175%;
+	width: 1252px;
+	height: 818px;
+	overflow: hidden;
+	clip-path: inset(56.35% 40.57% 0.52% 40.6% round 20%);
+	object-fit: cover;
+	margin-left: -200%;
+	margin-top: -175%;
 }
 
 .grid-container .cropped-image-katie {
-	  width: 1252px;
-	  height: 818px;
-	  overflow: hidden;
-	  clip-path: inset(56.35% 19.98% 0.52% 60.72% round 20%);
-	  object-fit: cover;
-	  margin-left: -300%;
-	  margin-top: -175%;
+	width: 1252px;
+	height: 818px;
+	overflow: hidden;
+	clip-path: inset(56.35% 19.98% 0.52% 60.72% round 20%);
+	object-fit: cover;
+	margin-left: -300%;
+	margin-top: -175%;
 }
 
-.grid-container .cropped-image-debbie {
-	  width: 1252px;
-	  height: 818px;
-	  overflow: hidden;
-	  clip-path: inset(56.35% 0.46% 0.52% 81.15% round 20%);
-	  object-fit: cover; 
-	  margin-left: -400%;
-	  margin-top: -175%;
+.grid-container .cropped-image-anna {
+	width: 1252px;
+	height: 818px;
+	overflow: hidden;
+	clip-path: inset(56.35% 0.46% 0.52% 81.15% round 20%);
+	object-fit: cover; 
+	margin-left: -400%;
+	margin-top: -175%;
 }
-
-
-
 
 /* Scores Table */
 #scores {
     width: 50%;
     margin: 20px auto;
-	margin-top: 100px;
+    margin-top: 100px;
     text-align: right;
 }
 
 #producers {
     width: 25%;
     margin: 20px auto;
-	margin-top: 100px;
+    margin-top: 100px;
     text-align: right;
+}
+
+#charts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 table {
@@ -165,7 +168,7 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #e6f7ff; /* Light Gray for even rows*/
+    background-color: #e6f7ff; /* Light Gray for even rows*/
 }
 
 
