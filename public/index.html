@@ -8,6 +8,172 @@
     <script src="https://cdn.plot.ly/plotly-3.0.0.min.js"></script>
 </head>
 <body>
-  Initial commit
+
+    <header>
+        <h1>Game Changer Viral Video Gallery</h1>
+    </header>
+
+    <main>
+		<section id="producers">
+			<h2>Fool's Gold Leaderboard</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Producer</th>
+						<th>Total Views</th>
+					</tr>
+				</thead>
+				<tr>
+					<td>Mike Trapp</td>
+					<td id="mike-overall"></td>
+				</tr>
+				<tr>
+					<td>Rekha Shanker</td>
+					<td id="rekha-overall"></td>
+				</tr>
+				<tr>
+					<td>Jordan Myrick</td>
+					<td id="jordan-overall"></td>
+				</tr>
+			</table>
+			<h3>Last Updated: Midnight 7/14/2025</h3>
+		</section>
+
+		<section id="gallery">
+            <div class="grid-container">
+					<a href="https://www.youtube.com/shorts/oO4kgmYivoQ"><img class="cropped-image-brennan" src="thumbnails.png" alt="Why Brennan is Leaving Dropout"></a>
+					<a href="https://www.youtube.com/shorts/Wm8SMsmWCts"><img class="cropped-image-izzy" src="thumbnails.png" alt="Izzy Spends $3000 on Animated Buttholes"></a>
+					<a href="https://www.youtube.com/shorts/wQVIfuNIc9I"><img class="cropped-image-erika" src="thumbnails.png" alt="Erika Roasts Sam with a Haircut"></a>
+					<a href="https://www.youtube.com/shorts/nfwmaVlp_hY"><img class="cropped-image-jordan" src="thumbnails.png" alt="Jordan Takes the Breast Milk Taste Test Challenge"></a>
+					<a href="https://www.youtube.com/shorts/aagwlycxv_k"><img class="cropped-image-johnny" src="thumbnails.png" alt="Presenting: The Human Puppy Bowl"></a>
+					
+					<a href="https://www.youtube.com/shorts/1lnl0jYln8s"><img class="cropped-image-grant" src="thumbnails.png" alt="Can Grant Get Over 40 Cracks At the Chiropractor"></a>
+					<a href="https://www.youtube.com/shorts/gMpx4A2lRTE"><img class="cropped-image-paul" src="thumbnails.png" alt="Paul Covers His Entire Body in Glue"></a>
+					<a href="https://www.youtube.com/shorts/HD5pyGbO_Is"><img class="cropped-image-sephie" src="thumbnails.png" alt="Vote For Your Favorite Sexy Dropout Carwash"></a>
+					<a href="https://www.youtube.com/shorts/5feqZBLXrMg"><img class="cropped-image-katie" src="thumbnails.png" alt="Dimension 20: On a Bus"></a>
+					<a href="https://www.youtube.com/shorts/UjHk90dxX20"><img class="cropped-image-debbie" src="thumbnails.png" alt="Anna Makes Strangers King for a Day"></a>
+            </div>
+        </section>	
+
+        <section id="scores">
+            <h2>Raw Scoring Data (in thousands)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Video</th>
+						<th>Producer</th>
+						<th>YouTube Views</th>
+						<th>Instagram Likes</th>
+						<th>TikTok Views</th>
+                        <th>Grand Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="tr-brennan">
+						<td>"Why Brennan is Leaving Dropout"</td>
+						<td id="brennan-producer">Mike Trapp, Rekha Shanker & Jordan Myrick</td>
+                        <td id="brennan-youtube"></td>
+                        <td id="brennan-instagram"></td>
+						<td id="brennan-tiktok"></td>
+						<td class="mike rekha jordan" id="brennan-total"></td>
+                    </tr>
+
+					<tr id="tr-izzy">
+						<td>"Izzy Spends $3000 on Animated Buttholes"</td>
+						<td id="izzy-producer">Mike Trapp & Rekha Shanker</td>
+                        <td id="izzy-youtube"></td>
+                        <td id="izzy-instagram"></td>
+						<td id="izzy-tiktok"></td>
+						<td class="mike rekha" id="izzy-total"></td>
+                    </tr>
+					
+					<tr id="tr-erika">
+						<td>"Erika Roasts Sam with a Haircut"</td>
+						<td id="erika-producer">Jordan Myrick</td>
+                        <td id="erika-youtube"></td>
+                        <td id="erika-instagram"></td>
+						<td id="erika-tiktok"></td>
+						<td class="jordan" id="erika-total"></td>
+                    </tr>
+					
+					<tr id="tr-jordan">
+						<td>"Jordan Takes the Breast Milk Taste Test Challenge"</td>
+						<td id="jordan-producer">Jordan Myrick</td>
+                        <td id="jordan-youtube"></td>
+                        <td id="jordan-instagram"></td>
+						<td id="jordan-tiktok"></td>
+						<td class="jordan" id="jordan-total"></td>
+                    </tr>
+					
+					<tr id="tr-johnny">
+						<td>"Presenting: The Human Puppy Bowl"</td>
+						<td id="johnny-producer">Mike Trapp & Jordan Myrick</td>
+                        <td id="johnny-youtube"></td>
+                        <td id="johnny-instagram"></td>
+						<td id="johnny-tiktok"></td>
+						<td class="mike jordan" id="johnny-total"></td>
+                    </tr>
+					
+					<tr id="tr-grant">
+						<td>"Can Grant Get Over 40 Cracks At the Chiropractor"</td>
+						<td id="grant-producer">Mike Trapp</td>
+                        <td id="grant-youtube"></td>
+                        <td id="grant-instagram"></td>
+						<td id="grant-tiktok"></td>
+						<td class="mike" id="grant-total"></td>
+                    </tr>
+					
+					<tr id="tr-paul">
+						<td>"Paul Covers His Entire Body in Glue"</td>
+						<td id="paul-producer">Mike Trapp</td>
+                        <td id="paul-youtube"></td>
+                        <td id="paul-instagram"></td>
+						<td id="paul-tiktok"></td>
+						<td class="mike" id="paul-total"></td>
+                    </tr>
+					
+					<tr id="tr-sephie">
+						<td>"Vote For Your Favorite Sexy Dropout Carwash"</td>
+						<td id="sephie-producer">Rekha Shanker & Jordan Myrick</td>
+                        <td id="sephie-youtube"></td>
+                        <td id="sephie-instagram"></td>
+						<td id="sephie-tiktok"></td>
+						<td class="rekha jordan" id="sephie-total"></td>
+                    </tr>
+					
+					<tr id="tr-katie">
+						<td>"Dimension 20: On a Bus"</td>
+						<td id="katie-producer">Rekha Shanker</td>
+                        <td id="katie-youtube"></td>
+                        <td id="katie-instagram"></td>
+						<td id="katie-tiktok"></td>
+						<td class="rekha" id="katie-total"></td>
+                    </tr>
+					
+					<tr id="tr-debbie">
+						<td>"Anna Makes Strangers King for a Day"</td>
+						<td id="debbie-producer">Jordan Myrick</td>
+                        <td id="debbie-youtube"></td>
+                        <td id="debbie-instagram"></td>
+						<td id="debbie-tiktok"></td>
+						<td class="jordan" id="debbie-total"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+		
+			
+    </main>
+	
+	<h3>F.A.Q. - Frequently Asked Questions</h3>
+	<ol>
+		<li>How did you collect the video statistics?
+			<ul><li>Tediously.</ul>
+		<li>But actually?
+			<ul><li>YouTube and Tiktok scores are taken directly from views. As of 7/15 (day 2), Instagram is taken from Likes as a proxy for views because I don't have an Instagram account to analyze deeper. I'll have a better, automated process by tomorrow.</ul>
+		<li>Can you add "X"?
+			<ul><li>I am already tinkering on the following ideas: ROI calculator for each video based on initial funding, a graphic or icon to indicate each producer's "portfolio", chart visualization of scores over time, and finally links to each video source (i.e. not just YouTube, and ideally a way to verify scores). 
+	</ol>
 </body>
+<script src="script.js"></script>
 </html>
