@@ -83,7 +83,37 @@ instagram,day1,grant,11
 instagram,day1,paul,23
 instagram,day1,sephie,32
 instagram,day1,katie,51
-instagram,day1,debbie,26`
+instagram,day1,debbie,26
+youtube,day2,brennan,888
+youtube,day2,izzy,413
+youtube,day2,erika,367
+youtube,day2,jordan,114
+youtube,day2,johnny,76
+youtube,day2,grant,83
+youtube,day2,paul,83
+youtube,day2,sephie,108
+youtube,day2,katie,435
+youtube,day2,debbie,128
+tiktok,day2,brennan,1600
+tiktok,day2,izzy,131
+tiktok,day2,erika,151
+tiktok,day2,jordan,445
+tiktok,day2,johnny,136
+tiktok,day2,grant,103
+tiktok,day2,paul,87
+tiktok,day2,sephie,101
+tiktok,day2,katie,578
+tiktok,day2,debbie,274
+instagram,day2,brennan,163
+instagram,day2,izzy,38
+instagram,day2,erika,35
+instagram,day2,jordan,108
+instagram,day2,johnny,16
+instagram,day2,grant,15
+instagram,day2,paul,34
+instagram,day2,sephie,46
+instagram,day2,katie,78
+instagram,day2,debbie,39`
 const jsonResult = csvToJson("social,date,video,views", csvData);
 for(let video in jsonResult) {
 	let youtube = 0
