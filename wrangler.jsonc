@@ -1,7 +1,6 @@
 {
   "name": "gamechanger-foolsgold",
   "compatibility_date": "2025-04-03",
-  "main": "public/index.html",
   "assets": {
     "directory": "./dist/",
     "not_found_handling": "single-page-application"
