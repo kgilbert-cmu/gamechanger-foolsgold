@@ -104,11 +104,6 @@ var portfoliosLayout = {
 	title: {
 		text: '(chart normalized for producer funding/investment)'
 	},
-	xaxis: {
-		title: {
-			text: 'Video Portfolios'
-		}
-	}
 };
 Plotly.newPlot('portfolios', portfolios, portfoliosLayout);
 
