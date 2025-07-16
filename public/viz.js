@@ -112,13 +112,156 @@ var portfoliosLayout = {
 };
 Plotly.newPlot('portfolios', portfolios, portfoliosLayout);
 
-// Tinkering with more charts...
-/*
-videoTimeline = 1;
+const epochs = Object.keys(jsonResult["brennan"])
+const dates = Object.keys(jsonResult["brennan"]).map(d => new Date(parseInt(d)))
+var lineTraceBrennan = {
+  type: 'scatter',
+  x: dates,
+  y: epochs.map(d => jsonResult["brennan"][d].youtube + jsonResult["brennan"][d].instagram + jsonResult["brennan"][d].tiktok),
+  mode: 'lines+markers',
+  name: document.getElementById("brennan-description").innerHTML
+};
+
+var lineTraceIzzy = {
+  type: 'scatter',
+  x: dates,
+  y: epochs.map(d => jsonResult["izzy"][d].youtube + jsonResult["izzy"][d].instagram + jsonResult["izzy"][d].tiktok),
+  mode: 'lines+markers',
+  name: document.getElementById("izzy-description").innerHTML,
+};
+
+var lineTraceErika = {
+  type: 'scatter',
+  x: dates,
+  y: epochs.map(d => jsonResult["erika"][d].youtube + jsonResult["erika"][d].instagram + jsonResult["erika"][d].tiktok),
+  mode: 'lines+markers',
+  name: document.getElementById("erika-description").innerHTML,
+};
+
+var lineTraceJordan = {
+  type: 'scatter',
+  x: dates,
+  y: epochs.map(d => jsonResult["jordan"][d].youtube + jsonResult["jordan"][d].instagram + jsonResult["jordan"][d].tiktok),
+  mode: 'lines+markers',
+  name: document.getElementById("jordan-description").innerHTML,
+};
+
+var lineTraceJohnny = {
+  type: 'scatter',
+  x: dates,
+  y: epochs.map(d => jsonResult["johnny"][d].youtube + jsonResult["johnny"][d].instagram + jsonResult["johnny"][d].tiktok),
+  mode: 'lines+markers',
+  name: document.getElementById("johnny-description").innerHTML,
+};
+
+var lineTraceGrant = {
+  type: 'scatter',
+  x: dates,
+  y: epochs.map(d => jsonResult["grant"][d].youtube + jsonResult["grant"][d].instagram + jsonResult["grant"][d].tiktok),
+  mode: 'lines+markers',
+  name: document.getElementById("grant-description").innerHTML,
+};
+
+var lineTracePaul = {
+  type: 'scatter',
+  x: dates,
+  y: epochs.map(d => jsonResult["paul"][d].youtube + jsonResult["paul"][d].instagram + jsonResult["paul"][d].tiktok),
+  mode: 'lines+markers',
+  name: document.getElementById("paul-description").innerHTML,
+};
+
+var lineTraceSephie = {
+  type: 'scatter',
+  x: dates,
+  y: epochs.map(d => jsonResult["sephie"][d].youtube + jsonResult["sephie"][d].instagram + jsonResult["sephie"][d].tiktok),
+  mode: 'lines+markers',
+  name: document.getElementById("sephie-description").innerHTML,
+};
+
+var lineTraceKatie = {
+  type: 'scatter',
+  x: dates,
+  y: epochs.map(d => jsonResult["katie"][d].youtube + jsonResult["katie"][d].instagram + jsonResult["katie"][d].tiktok),
+  mode: 'lines+markers',
+  name: document.getElementById("katie-description").innerHTML,
+};
+
+var lineTraceAnna = {
+  type: 'scatter',
+  x: dates,
+  y: epochs.map(d => jsonResult["anna"][d].youtube + jsonResult["anna"][d].instagram + jsonResult["anna"][d].tiktok),
+  mode: 'lines+markers',
+  name: document.getElementById("anna-description").innerHTML,
+};
+
+var videoTimeline = [lineTraceBrennan, lineTraceIzzy, lineTraceErika, lineTraceJordan, lineTraceJohnny, lineTraceGrant, lineTracePaul, lineTraceSephie, lineTraceKatie, lineTraceAnna];
+
 var videoTimelineLayout = {
+  yaxis: {
+	  type: "log"
+  },
+  xaxis: {
+    tickmode: "linear", //  If "linear", the placement of the ticks is determined by a starting position `tick0` and a tick step `dtick`
+    tickformat: '%d %B\n(%A)',
+    dtick: 24 * 60 * 60 * 1000 // one day in milliseconds
+  },
+  showlegend: false
 }
+
 Plotly.newPlot('videoTimeline', videoTimeline, videoTimelineLayout);
 
+
+
+var producerLineMike = {
+	type: 'scatter',
+	x: dates,
+	y: epochs.map(d => 
+		Math.sumPrecise(Object.keys(mike).map(i => mike[i].parentNode.id).map(v => 
+			jsonResult[v][d].youtube + jsonResult[v][d].instagram + jsonResult[v][d].tiktok
+		))
+	),
+  mode: 'lines',
+  name: "Mike Trapp",
+};
+
+var producerLineRekha = {
+	type: 'scatter',
+	x: dates,
+	y: epochs.map(d => 
+		Math.sumPrecise(Object.keys(rekha).map(i => rekha[i].parentNode.id).map(v => 
+			jsonResult[v][d].youtube + jsonResult[v][d].instagram + jsonResult[v][d].tiktok
+		))
+	),
+	mode: 'lines',
+	name: "Rekha Shanker",
+};
+
+var producerLineJordan = {
+	type: 'scatter',
+	x: dates,
+	y: epochs.map(d => 
+		Math.sumPrecise(Object.keys(jordan).map(i => jordan[i].parentNode.id).map(v => 
+			jsonResult[v][d].youtube + jsonResult[v][d].instagram + jsonResult[v][d].tiktok
+		))
+	),
+	mode: 'lines',
+	name: "Jordan Myrick",
+};
+
+var producerTimeline = [producerLineMike, producerLineRekha, producerLineJordan];
+
+var producerTimelineLayout = {
+  xaxis: {
+    tickmode: "linear", //  If "linear", the placement of the ticks is determined by a starting position `tick0` and a tick step `dtick`
+    tickformat: '%d %B\n(%A)',
+    dtick: 24 * 60 * 60 * 1000 // one day in milliseconds
+  }
+}
+
+Plotly.newPlot('producerTimeline', producerTimeline, producerTimelineLayout);
+
+// Tinkering with more charts...
+/*
 var videos = []
 for (let video in jsonResult) {
 	videos.push(video)

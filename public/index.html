@@ -36,15 +36,15 @@
 					<td id="jordan-overall"></td>
 				</tr>
 			</table>
-			<h3>Last Updated - 4:00pm CST 7/15/2025</h3>
+			<h3 id="last-updated"></h3>
 			
 			
 		</section>
 		<section id="charts">
-			<div id="portfolios">
-			<!--<div id="videoTimeline">
-			<!--<div id="producerTimeline">
-			<!--<div id="videoScatter">-->
+			<div id="portfolios"></div>
+			<div id="videoTimeline"></div>
+			<div id="producerTimeline" hidden></div>
+			<div id="videoScatter" hidden></div>
 		</section>
 		<section id="gallery">
             <div class="grid-container">
@@ -60,7 +60,7 @@
 					<a href="https://www.youtube.com/shorts/5feqZBLXrMg"><img class="cropped-image-katie" src="thumbnails.png" alt="Dimension 20: On a Bus"></a>
 					<a href="https://www.youtube.com/shorts/UjHk90dxX20"><img class="cropped-image-anna" src="thumbnails.png" alt="Anna Makes Strangers King for a Day"></a>
             </div>
-        </section>	
+        </section>
 
         <section id="scores">
             <h2>Raw Scoring Data (in thousands)</h2>
@@ -71,14 +71,14 @@
 						<th>Producer</th>
 						<th>Funding</th>
 						<th>YouTube Views</th>
-						<th>Instagram Likes</th>
+						<th>Instagram Likes x10</th>
 						<th>TikTok Views</th>
                         <th>Grand Total</th>
 						<th>ROI (views per dollar)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr id="tr-brennan">
+                    <tr id="brennan">
 						<td id="brennan-description">"Why Brennan is Leaving Dropout"</td>
 						<td id="brennan-producer">Mike Trapp, Rekha Shanker & Jordan Myrick</td>
 						<td id="brennan-funding">$20,000</td>
@@ -89,7 +89,7 @@
 						<td id="brennan-roi"></td>
                     </tr>
 
-					<tr id="tr-izzy">
+					<tr id="izzy">
 						<td id="izzy-description">"Izzy Spends $3000 on Animated Buttholes"</td>
 						<td id="izzy-producer">Mike Trapp & Rekha Shanker</td>
 						<td id="izzy-funding">$4,000</td>
@@ -100,7 +100,7 @@
 						<td id="izzy-roi"></td>
                     </tr>
 					
-					<tr id="tr-erika">
+					<tr id="erika">
 						<td id="erika-description">"Erika Roasts Sam with a Haircut"</td>
 						<td id="erika-producer">Jordan Myrick</td>
 						<td id="erika-funding">$506</td>
@@ -111,7 +111,7 @@
 						<td id="erika-roi"></td>
                     </tr>
 					
-					<tr id="tr-jordan">
+					<tr id="jordan">
 						<td id="jordan-description">"Jordan Takes the Breast Milk Taste Test Challenge"</td>
 						<td id="jordan-producer">Jordan Myrick</td>
 						<td id="jordan-funding">$6,144</td>
@@ -122,7 +122,7 @@
 						<td id="jordan-roi"></td>
                     </tr>
 					
-					<tr id="tr-johnny">
+					<tr id="johnny">
 						<td id="johnny-description">"Presenting: The Human Puppy Bowl"</td>
 						<td id="johnny-producer">Mike Trapp & Jordan Myrick</td>
 						<td id="johnny-funding">$5,000</td>
@@ -133,7 +133,7 @@
 						<td id="johnny-roi"></td>
                     </tr>
 					
-					<tr id="tr-grant">
+					<tr id="grant">
 						<td id="grant-description">"Can Grant Get Over 40 Cracks At the Chiropractor?"</td>
 						<td id="grant-producer">Mike Trapp</td>
 						<td id="grant-funding">$1,201</td>
@@ -144,7 +144,7 @@
 						<td id="grant-roi"></td>
                     </tr>
 					
-					<tr id="tr-paul">
+					<tr id="paul">
 						<td id="paul-description">"Paul Covers His Entire Body in Glue"</td>
 						<td id="paul-producer">Mike Trapp</td>
 						<td id="paul-funding">$550</td>
@@ -155,7 +155,7 @@
 						<td id="paul-roi"></td>
                     </tr>
 					
-					<tr id="tr-sephie">
+					<tr id="sephie">
 						<td id="sephie-description">"Vote For Your Favorite Sexy Dropout Carwash"</td>
 						<td id="sephie-producer">Rekha Shanker & Jordan Myrick</td>
 						<td id="sephie-funding">$3,700</td>
@@ -166,7 +166,7 @@
 						<td id="sephie-roi"></td>
                     </tr>
 					
-					<tr id="tr-katie">
+					<tr id="katie">
 						<td id="katie-description">"Dimension 20: On a Bus"</td>
 						<td id="katie-producer">Rekha Shanker</td>
 						<td id="katie-funding">$3,500</td>
@@ -177,7 +177,7 @@
 						<td id="katie-roi"></td>
                     </tr>
 					
-					<tr id="tr-anna">
+					<tr id="anna">
 						<td id="anna-description">"Anna Makes Strangers King for a Day"</td>
 						<td id="anna-producer">Jordan Myrick</td>
 						<td id="anna-funding">$1,500</td>
@@ -199,9 +199,9 @@
 		<li>How did you collect the video statistics?
 			<ul><li>Tediously.</ul>
 		<li>But actually?
-			<ul><li>YouTube and Tiktok scores are taken directly from views. As of 7/15 (day 2), Instagram is taken from Likes as a proxy for views because the raw data can't be analyzed deeper. Need to find a better, automated process quickly.</ul>
+			<ul><li>Eyeballing the websites in three separate tabs, YouTube and TikTok are rounded to the nearest thousand. Instagram doesn't show views on desktop (even though it does on mobile...) so likes have been multiplied 10x as a proxy.</ul>
 		<li>Can you add "X"?
-			<ul><li>I am already tinkering on the following ideas: a graphic or icon to indicate each producer's "portfolio", chart visualization of scores over time, and finally links to each video source (i.e. not just YouTube, and ideally a way to verify scores).</ul>
+			<ul><li>I'm still tinkering on the chart visualization of scores over time, but I think it will look better once more data is collected. I also want to scrap the whole picture gallery thumbnail container with links to each video source (i.e. not just YouTube). This should give a better/natural way to verify scores.</ul>
 	</ol>
 </body>
 <script src="scores.js"></script>

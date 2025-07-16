@@ -31,7 +31,7 @@ function csvToJson(header, csvString) {
 
     // Iterate through each line (row)
     for (let i = 0; i < lines.length; i++) {
-      const row = lines[i].trim(); // Remove leading/trailing whitespace
+      let row = lines[i].trim(); // Remove leading/trailing whitespace
 
       // Check if the row is not empty
       if (!row) continue;
@@ -41,7 +41,9 @@ function csvToJson(header, csvString) {
       // Add the parsed row to the JSON data object
 	  if (data[parsedRow.video].hasOwnProperty(parsedRow.date)) {
 		data[parsedRow.video][parsedRow.date][parsedRow.social] = parseInt(parsedRow.views)
-	  } else {
+	  } else if (Object.keys(data[parsedRow.video]).length > 0) { // if it already exists at all
+		data[parsedRow.video][parsedRow.date] = { [parsedRow.social]: parseInt(parsedRow.views) }
+	  } else { // fresh object
 		data[parsedRow.video] = {[parsedRow.date]: { [parsedRow.social]: parseInt(parsedRow.views) }}
 	  }
     }
@@ -55,11 +57,15 @@ function csvToJson(header, csvString) {
 
 // scores CSV loaded by HTML script tag header
 const jsonResult = csvToJson("social,date,video,views", scoresCSV);
+let last = 0
 for(let video in jsonResult) {
 	let youtube = 0
 	let instagram = 0
 	let tiktok = 0
 	for (let date in jsonResult[video]) {
+		if (date > last) {
+			last = date
+		}
 		youtube = Math.max(jsonResult[video][date].youtube, youtube)
 		instagram = Math.max(jsonResult[video][date].instagram, instagram)
 		tiktok = Math.max(jsonResult[video][date].tiktok, tiktok)
@@ -104,3 +110,5 @@ if (rekhaTotal == highest)
 document.getElementById("mike-overall").innerHTML = Math.trunc(mikeTotal/100)/10 +"M" + mikeSuffix
 document.getElementById("rekha-overall").innerHTML = Math.trunc(rekhaTotal/100)/10 +"M" + rekhaSuffix
 document.getElementById("jordan-overall").innerHTML = Math.trunc(jordanTotal/100)/10 +"M" + jordanSuffix
+
+document.getElementById("last-updated").innerHTML = `Last Updated - ${new Date(parseInt(last)).toLocaleString()}`

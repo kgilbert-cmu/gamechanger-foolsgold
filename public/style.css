@@ -6,13 +6,16 @@ body {
 }
 
 header {
+	display: flex;
     background-color: #222;
     padding: 20px;
     text-align: center;
+	flex-grow: 1;
 }
 
 header h1 {
     color: #FFFF00;
+	flex-grow: 1;
 }
 
 /* Gallery Container */
@@ -146,6 +149,7 @@ header h1 {
 
 #charts {
     display: flex;
+	flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -172,10 +176,10 @@ tr:nth-child(even) {
 }
 
 
-/* Responsive adjustments - can be adjusted further to suit design 
+/* Responsive adjustments - can be adjusted further to suit design */
 @media (max-width: 818px) {
     .grid-container {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
-*/
+
