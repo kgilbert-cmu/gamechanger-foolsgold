@@ -206,37 +206,39 @@ var videoTimelineLayout = {
 Plotly.newPlot('videoTimeline', videoTimeline, videoTimelineLayout);
 
 
-
+let mikeFractions = {"brennan": 3749/20000, "izzy": .5, "johnny": .5, "grant": 1, "paul": 1}
 var producerLineMike = {
 	type: 'scatter',
 	x: dates,
 	y: epochs.map(d => 
 		Math.sumPrecise(Object.keys(mike).map(i => mike[i].parentNode.id).map(v => 
-			jsonResult[v][d].youtube + jsonResult[v][d].instagram + jsonResult[v][d].tiktok
+			mikeFractions[v] * (jsonResult[v][d].youtube + jsonResult[v][d].instagram + jsonResult[v][d].tiktok)
 		))
 	),
   mode: 'lines',
   name: "Mike Trapp",
 };
 
+let rekhaFractions = {"brennan": 150/20000, "izzy": .5, "sephie": .5, "katie": 1}
 var producerLineRekha = {
 	type: 'scatter',
 	x: dates,
 	y: epochs.map(d => 
 		Math.sumPrecise(Object.keys(rekha).map(i => rekha[i].parentNode.id).map(v => 
-			jsonResult[v][d].youtube + jsonResult[v][d].instagram + jsonResult[v][d].tiktok
+			rekhaFractions[v] * (jsonResult[v][d].youtube + jsonResult[v][d].instagram + jsonResult[v][d].tiktok)
 		))
 	),
 	mode: 'lines',
 	name: "Rekha Shanker",
 };
 
+let jordanFractions = {"brennan": 0, "erika": 1, "jordan": 1, "johnny": .5, "sephie": .5, "anna": 1}
 var producerLineJordan = {
 	type: 'scatter',
 	x: dates,
 	y: epochs.map(d => 
 		Math.sumPrecise(Object.keys(jordan).map(i => jordan[i].parentNode.id).map(v => 
-			jsonResult[v][d].youtube + jsonResult[v][d].instagram + jsonResult[v][d].tiktok
+			jordanFractions[v] * (jsonResult[v][d].youtube + jsonResult[v][d].instagram + jsonResult[v][d].tiktok)
 		))
 	),
 	mode: 'lines',
