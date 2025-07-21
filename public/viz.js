@@ -2,7 +2,7 @@ let producersAxis = ['Mike Trapp', 'Rekha Shanker', 'Jordan Myrick', 'Sam Reich'
 
 var traceBrennan = {
   x: producersAxis,
-  y: [3749/20000, 150/20000, 0, 16101/20000].map(elem => elem * document.getElementById("izzy-total").innerHTML),
+  y: [3749/20000, 150/20000, 0, 16101/20000].map(elem => elem * document.getElementById("brennan-total").innerHTML),
   name: document.getElementById("brennan-description").innerHTML,
   type: 'bar'
 };
