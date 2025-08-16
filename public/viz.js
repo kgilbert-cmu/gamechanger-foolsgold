@@ -197,8 +197,8 @@ var videoTimelineLayout = {
   },
   xaxis: {
     tickmode: "linear", //  If "linear", the placement of the ticks is determined by a starting position `tick0` and a tick step `dtick`
-    tickformat: '%d %B\n(%A)',
-    dtick: 24 * 60 * 60 * 1000 // one day in milliseconds
+    tickformat: '%d %B\n',
+    dtick: 7 * 24 * 60 * 60 * 1000 // one week in milliseconds
   },
   showlegend: false
 }
@@ -250,8 +250,8 @@ var producerTimeline = [producerLineMike, producerLineRekha, producerLineJordan]
 var producerTimelineLayout = {
   xaxis: {
     tickmode: "linear", //  If "linear", the placement of the ticks is determined by a starting position `tick0` and a tick step `dtick`
-    tickformat: '%d %B\n(%A)',
-    dtick: 24 * 60 * 60 * 1000 // one day in milliseconds
+    tickformat: '%d %B\n',
+    dtick: 7 * 24 * 60 * 60 * 1000 // one week in milliseconds
   }
 }
 
